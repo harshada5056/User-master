@@ -1,0 +1,10 @@
+services:
+    user:
+        image: pratikshakute023/user:s4
+        container_name: user-ms
+        ports:
+            - "9002:9002"
+        deploy:
+            resources:
+                limits:
+                    memory: "700m"
