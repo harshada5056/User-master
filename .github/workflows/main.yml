@@ -42,8 +42,8 @@
           run: |
             docker ps  # This will show the running containers, ensuring the container started properly
 
-        - name: Test the app
+        - name: Curl from inside the container
           run: |
-            curl http://localhost:8080
+            docker exec my-spring-app curl http://localhost:8080 
  
  
