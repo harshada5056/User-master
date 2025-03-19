@@ -1,0 +1,25 @@
+  name: build and deploy spring-api
+  on:
+    push:
+      branches:
+        - master
+ 
+  jobs:
+    build-deploy:
+      name: build and deploy spring-api
+      runs-on: ubuntu-latest
+      steps:
+        - name: checkout code
+          uses: actions/checkout@v3
+ 
+        - name: setup jdk 17
+          uses: actions/setup-java@v3
+          with:
+            distribution: 'corretto'
+            java-version: 17
+        - name: build the app
+          run: |
+            cd demo
+            mvn clean
+            mvn -B package --file pom.xml
+ 
