@@ -39,5 +39,9 @@
         - name: Verify the container is running
           run: |
             docker ps  # This will show the running containers, ensuring the container started properly
+
+        - name: Test the app
+          run: |
+            curl http://localhost:8080
  
  
