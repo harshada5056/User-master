@@ -20,6 +20,5 @@
         - name: build the app
           run: |
             cd user
-            mvn clean
-            mvn -B package --file pom.xml
+            mvn clean package --file pom.xml -B
  
