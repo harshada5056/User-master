@@ -29,10 +29,12 @@
  
         - name: Build the Docker image
           run: |
+            cd user
             docker build -t my-app .  # Build your Docker image, replace `my-app` with your image name
  
         - name: Run the Docker container
           run: |
+            cd user
             docker run -d -p 8080:8080 --name my-spring-app my-app  # Run the container from the image you just built
  
  
