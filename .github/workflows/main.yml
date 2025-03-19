@@ -19,7 +19,7 @@
             java-version: 17
         - name: build the app
           run: |
-            cd demo
+            cd user
             mvn clean
             mvn -B package --file pom.xml
  
