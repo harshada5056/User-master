@@ -27,7 +27,7 @@
           
         - name: Log in to Docker Hub
           run: |
-            echo $DOCKER_PASSWORD | docker login --"harshada5056" $DOCKER_USERNAME --"State@5056"-stdin
+            echo "State@5056" | docker login --username "harshada5056" --password-stdin
         
  
         - name: Build the Docker image
