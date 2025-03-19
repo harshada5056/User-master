@@ -36,6 +36,9 @@
           run: |
             cd user
             docker run -d -p 8080:8080 --name my-spring-app my-app  # Run the container from the image you just built
+        - name: Check Docker logs
+          run: |
+            docker logs my-spring-app
         - name: Verify the container is running
           run: |
             docker ps  # This will show the running containers, ensuring the container started properly
