@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
-@Schema(description = "Use", name = "User")
+@Schema(description = "User", name = "User")
 public class UserEntity {
     @Id@GeneratedValue(strategy = GenerationType.AUTO)
     @Schema(name = "userId",example ="1",required = true)
