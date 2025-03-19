@@ -48,7 +48,7 @@
         - name: Run the Docker container
           run: |
             cd user
-            docker run -d -p 8080:8080 --name my-spring-app my-app  # Run the container from the image you just built
+            docker run -d -p 9002:9002 --name my-spring-app my-app  # Run the container from the image you just built
             sleep 10
         
         - name: Verify the container is running
