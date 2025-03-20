@@ -6,7 +6,6 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -30,12 +29,6 @@ public class UserController {
     @GetMapping("/{userId}")
     public ResponseTemplateVo getUserWithItem(@PathVariable("userId") Long userId) {
         return userService.getUserWithItem(userId);
-    }
-
-    @PutMapping("/{userId}")
-    public ResponseEntity<UserEntity> updateUser(@PathVariable("userId") Long userId, @RequestBody UserEntity user) {
-        UserEntity updatedUser = userService.updateUser(userId, user);
-        return ResponseEntity.ok(updatedUser);
     }
 
 

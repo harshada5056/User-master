@@ -31,9 +31,5 @@ private RestTemplate restTemplate;
     }
 
     public UserEntity updateUser(Long userId, UserEntity user) {
-        UserEntity existingUser = userRepo.findByUserId(userId);
-        existingUser.setName(user.getName());
-        existingUser.setAddress(user.getAddress());
-        return userRepo.save(existingUser);
     }
 }
