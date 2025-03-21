@@ -23,6 +23,9 @@ public class UserEntity {
     @Schema(name = "itemId",example ="1",required = true)
     private Long itemId;
 
+    public UserEntity(String john, String doe, String number) {
+    }
+
     public Long getUserId() {
         return userId;
     }
