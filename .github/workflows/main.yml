@@ -55,5 +55,11 @@
           run: |
             docker ps  # This will show the running containers, ensuring the container started properly
 
+        - name: Run Cucumber Tests
+          run:
+            cd user
+            mvn test
+            
+
      
  
