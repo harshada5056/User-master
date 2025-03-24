@@ -17,10 +17,17 @@
           with:
             distribution: 'corretto'
             java-version: 17
+        - name: Run Cucumber Tests
+          run: |
+            cd user
+            mvn test
         - name: build the app
           run: |
             cd user
             mvn clean package --file pom.xml -B
+        
+
+      # Only proceed to build and deploy if tests pass
             
         - name: Set up Docker Buildx
           uses: docker/setup-buildx-action@v2  # Set up Docker Buildx for multi-platform support (optional but recommende
@@ -55,10 +62,7 @@
           run: |
             docker ps  # This will show the running containers, ensuring the container started properly
 
-        - name: Run Cucumber Tests
-          run: |
-            cd user
-            mvn test
+        
         
             
 
